@@ -1,0 +1,8 @@
+streamlit
+langchain
+torch
+transformers
+diffusers
+accelerate
+sentencepiece
+Pillow
