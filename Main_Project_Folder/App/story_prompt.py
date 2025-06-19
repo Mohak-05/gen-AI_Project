@@ -8,7 +8,7 @@ def generate_story(name, genre, traits):
         f"Create a vivid, detailed backstory and description for a fictional character.\n"
         f"Name: {name}\n"
         f"Genre: {genre}\n"
-        f"Traits: {traits}\n"
+        f"Traits: {traits}\n" 
         f"Write it in an immersive, engaging style with rich language."
     )
 
