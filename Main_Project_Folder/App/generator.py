@@ -1,15 +1,14 @@
-from App.story_prompt import generate_story
-from App.image_generator import generate_image
+# generator.py
+
+from story_prompt import generate_story
+from image_generator import generate_image
 
 def generate_character(name, genre, traits):
-    result = generate_story(name, genre, traits)
+    print("🧠 Generating character story...")
+    story = generate_story(name, genre, traits)
 
-    story, appearance = "", ""
-    for line in result.split("\n"):
-        if line.startswith("Story:"):
-            story = line.replace("Story:", "").strip()
-        elif line.startswith("Appearance:"):
-            appearance = line.replace("Appearance:", "").strip()
+    print("🎨 Generating character image...")
+    image_prompt = f"{name}, a {genre} character with traits: {traits}"
+    image_path = generate_image(image_prompt)
 
-    image_path = generate_image(appearance)
     return story, image_path
