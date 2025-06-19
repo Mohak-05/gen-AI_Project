@@ -6,8 +6,6 @@ from config import GEMINI_IMAGE_KEY, GEMINI_IMAGE_MODEL
 from PIL import Image
 from io import BytesIO
 
-# Configure the Gemini client with your API key
-# Make sure GEMINI_IMAGE_KEY is set in your config.py
 client = genai.Client(api_key=GEMINI_IMAGE_KEY)
 
 def generate_image(prompt):
